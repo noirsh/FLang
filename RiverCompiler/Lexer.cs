@@ -4,6 +4,8 @@ public class Lexer
 {
     public static string Analyser(string text)
     {
+        Logger.ConsoleLog("Start Lexical Analysis", White, false);
+
         var stringBuilder = new StringBuilder();
         var lines = Spliter(text, "\n");
 
@@ -18,6 +20,7 @@ public class Lexer
             stringBuilder.Append("\n");
         }
 
+        Logger.ConsoleLog("Lexical Analysis Finished Successfully ...", Green);
         return stringBuilder.ToString();
     }
 

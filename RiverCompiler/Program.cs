@@ -14,11 +14,10 @@ try
     var text = Reader.ReadFile();
     text = Lexer.Analyser(text);
     text = River.StartCompiling(text);
-    Writer.GenerateOutputName();
     Writer.Write(text);
 }
 catch 
 {
-    Logger.ConsoleLog($"Error detected. exiting ...", "red");
+    Logger.ConsoleLog($"Error detected. exiting ...", Red);
     return;
 }

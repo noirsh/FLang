@@ -4,7 +4,7 @@ public class River
 {
     public static string StartCompiling(string lexerOutput)
     {
-        Logger.ConsoleLog("Start Compiling ...", "white", false);
+        Logger.ConsoleLog("Start Compiling ...", White, false);
 
         lexerOutput = lexerOutput.Replace("Inv::", "");
         var lines = Spliter(lexerOutput, "\r\n");
@@ -39,12 +39,14 @@ public class River
         }
 
         var stringBuilder = new StringBuilder();
-        stringBuilder.Append("using static System.Console\n");
+        stringBuilder.Append("using static System.Console;\n");
         foreach (var line in lines)
         {
             stringBuilder.Append(line);
             stringBuilder.Append("\n");
         }
+
+        Logger.ConsoleLog("Compiling Finished Successfully ...", Green);
         return stringBuilder.ToString();
     }
 

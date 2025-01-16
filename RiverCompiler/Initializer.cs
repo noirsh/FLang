@@ -4,17 +4,17 @@ public class Initializer
 {
     public static bool IsArgsValid(string[] args)
     {
-        Logger.ConsoleLog("Validating Args ...", "white", false);
+        Logger.ConsoleLog("Validating Args ...", White, false);
 
         if (File.Exists(args[0]))
         {
-            Logger.ConsoleLog("File found.", "green");
-            StaticInfo.FilePath = args[0];
+            Logger.ConsoleLog("File found.", Green);
+            FilePath = args[0];
             return true;
         }
         else
         {
-            Logger.ConsoleLog("File was not found.", "red");
+            Logger.ConsoleLog("File was not found.", Red);
             return false;
         }
     }

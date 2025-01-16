@@ -2,11 +2,11 @@
 
 public static class Logger
 {
-    public static void ConsoleLog(string msg, string color, bool indented = true)
+    public static void ConsoleLog(string msg, ConsoleColor color = White, bool indented = true)
     {
         try
         {
-            ForegroundColor = (ConsoleColor)Enum.Parse(typeof(ConsoleColor), color, true);
+            ForegroundColor = color;
             if (indented)
             {
                 WriteLine($"\t -> {msg}");
@@ -18,7 +18,7 @@ public static class Logger
         }
         catch (Exception e)
         {
-            ConsoleLog(e.Message, "red", true);
+            ConsoleLog(e.Message, Red, true);
             return;
         }
         finally

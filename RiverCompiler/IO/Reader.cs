@@ -4,28 +4,29 @@ public class Reader
 {
     public static string ReadFile()
     {
-        Logger.ConsoleLog("Reading content from file ...", "white", false);
+        Logger.ConsoleLog("Reading content from file ...", White, false);
 
         string readedContent = string.Empty;
         try
         {
-            using StreamReader reader = new(StaticInfo.FilePath);
+            using StreamReader reader = new(FilePath);
             readedContent = reader.ReadToEnd();
         }
 
         catch (UnauthorizedAccessException e)
         {
             // check for denied spelling
-            Logger.ConsoleLog("Access Denied ...", "red");
-            Logger.ConsoleLog(e.Message, "red");
+            Logger.ConsoleLog("Access Denied ...", Red);
+            Logger.ConsoleLog(e.Message, Red);
             throw;
         }
 
         catch (Exception e)
         {
-            Logger.ConsoleLog(e.Message, "red");
+            Logger.ConsoleLog(e.Message, Red);
         }
 
+        Logger.ConsoleLog("Done ...", Green);
         return readedContent;
     }
 }
