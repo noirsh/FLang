@@ -1,0 +1,49 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Solarized Dark Colors -->
+    <Color x:Key="Base03">#002b36</Color>
+    <Color x:Key="Base02">#073642</Color>
+    <Color x:Key="Base01">#586e75</Color>
+    <Color x:Key="Base00">#657b83</Color>
+    <Color x:Key="Base0">#839496</Color>
+    <Color x:Key="Base1">#93a1a1</Color>
+    <Color x:Key="Base2">#eee8d5</Color>
+    <Color x:Key="Base3">#fdf6e3</Color>
+    <Color x:Key="Yellow">#b58900</Color>
+    <Color x:Key="Orange">#cb4b16</Color>
+    <Color x:Key="Red">#dc322f</Color>
+    <Color x:Key="Magenta">#d33682</Color>
+    <Color x:Key="Violet">#6c71c4</Color>
+    <Color x:Key="Blue">#268bd2</Color>
+    <Color x:Key="Cyan">#2aa198</Color>
+    <Color x:Key="Green">#859900</Color>
+
+    <!-- Background and Foreground Colors -->
+    <SolidColorBrush x:Key="BackgroundBrush" Color="{StaticResource Base03}"/>
+    <SolidColorBrush x:Key="ForegroundBrush" Color="{StaticResource Base0}"/>
+    <SolidColorBrush x:Key="ControlBackgroundBrush" Color="{StaticResource Base02}"/>
+    <SolidColorBrush x:Key="ControlForegroundBrush" Color="{StaticResource Base1}"/>
+    <SolidColorBrush x:Key="AccentBrush" Color="{StaticResource Blue}"/>
+    
+    <!-- Styles for Controls -->
+    <Style TargetType="Window">
+        <Setter Property="Background" Value="{StaticResource BackgroundBrush}"/>
+        <Setter Property="Foreground" Value="{StaticResource ForegroundBrush}"/>
+    </Style>
+
+    <Style TargetType="Menu">
+        <Setter Property="Background" Value="{StaticResource ControlBackgroundBrush}"/>
+        <Setter Property="Foreground" Value="{StaticResource ControlForegroundBrush}"/>
+    </Style>
+
+    <Style TargetType="StatusBar">
+        <Setter Property="Background" Value="{StaticResource ControlBackgroundBrush}"/>
+        <Setter Property="Foreground" Value="{StaticResource ControlForegroundBrush}"/>
+    </Style>
+
+    <Style TargetType="ToolBar">
+        <Setter Property="Background" Value="{StaticResource ControlBackgroundBrush}"/>
+        <Setter Property="Foreground" Value="{StaticResource ControlForegroundBrush}"/>
+    </Style>
+</ResourceDictionary>
