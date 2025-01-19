@@ -30,7 +30,7 @@ public class Reader
         return readedContent;
     }
 
-    public static string ReadExtra(string text)
+    public static string InjectDependencies(string text)
     {
         if (!text.Contains("mod "))
             return text;

@@ -12,10 +12,11 @@ if (!Initializer.IsArgsValid(args))
 try
 {
     var text = Reader.ReadFile(FilePath);
-    text = Reader.ReadExtra(text);
+    text = Reader.InjectDependencies(text);
     text = Lexer.Analyser(text);
     text = River.StartCompiling(text);
     Writer.Write(text);
+
 }
 catch 
 {
