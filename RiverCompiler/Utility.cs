@@ -1,6 +1,6 @@
 ﻿namespace RiverCompiler;
 
-public class Utility
+public static class Utility
 {
     public static string[] Spliter(string text, string seperator)
     {
@@ -39,5 +39,23 @@ public class Utility
     public static bool isReturnLine(string line)
     {
         return line.Contains("out");
+    }
+
+    public static string ExtractModFileName(string line)
+    {
+        return line.Trim().Replace("mod ", "").Replace(";", "");
+    }
+
+    public static string GetFinallString(this string[] array)
+    {
+        var stringBuilder = new StringBuilder();
+
+        foreach (var item in array)
+        {
+            stringBuilder.Append(item);
+            stringBuilder.Append("\r\n");
+        }
+
+        return stringBuilder.ToString();
     }
 }

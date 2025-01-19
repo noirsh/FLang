@@ -11,7 +11,8 @@ if (!Initializer.IsArgsValid(args))
 
 try
 {
-    var text = Reader.ReadFile();
+    var text = Reader.ReadFile(FilePath);
+    text = Reader.ReadExtra(text);
     text = Lexer.Analyser(text);
     text = River.StartCompiling(text);
     Writer.Write(text);

@@ -2,7 +2,7 @@
   "profiles": {
     "RiverCompiler": {
       "commandName": "Project",
-      "commandLineArgs": "C:\\Users\\ttymo\\source\\repos\\FLang\\RiverCompiler\\test\\main.f"
+      "commandLineArgs": "C:\\Users\\ttymo\\source\\repos\\FLang\\RiverCompiler\\bin\\Debug\\net9.0\\main.f"
     }
   }
 }

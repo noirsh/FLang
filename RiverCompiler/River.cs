@@ -11,11 +11,7 @@ public class River
 
         for (int i = 0; i < lines.Length; i++)
         {
-            if (isModStatement(lines[i]))
-            {
-                lines[i] = ModCompiler(lines[i]);
-            }
-            else if (isFunctionSigniture(lines[i]))
+            if (isFunctionSigniture(lines[i]))
             {
                 var returnType = Spliter(lines[i].Trim(), " ")[^1];
                 int lastIndex = lines[i].LastIndexOf(" ");
@@ -50,18 +46,9 @@ public class River
         return stringBuilder.ToString();
     }
 
-    private static string ModCompiler(string line)
-    {
-        return line.Replace("mod", "using");
-    }
-
     private static string StatementCompiler(string line)
     {
-        if (isModStatement(line))
-        {
-            line = ModCompiler(line);
-        }
-        else if (isReturnLine(line))
+        if (isReturnLine(line))
         {
             line = line.Replace("out", "return");
             line = line.Replace("->", " ");
